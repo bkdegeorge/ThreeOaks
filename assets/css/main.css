@@ -4698,6 +4698,7 @@ input, select, textarea {
 		z-index: 1;
 		position: relative;
 		opacity: 85%;
+		max-width: 100%;
 	}
 
 	#footer2 {
