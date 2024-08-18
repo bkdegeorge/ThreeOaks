@@ -4698,6 +4698,12 @@ input, select, textarea {
 
 	#stafflogo {
 		float: right;
-		margin: 0px;
+		margin: 0px 0px 10px 35px;
 		padding: 0px;
+		max-width: 100%;
+	}
+
+	#staffphoto {
+		max-width: 100%;
+		transform: scale(0.75);
 	}
