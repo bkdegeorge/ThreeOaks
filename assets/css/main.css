@@ -4697,10 +4697,11 @@ input, select, textarea {
 	}
 
 	#stafflogo {
-		float: right;
-		margin: 0px 0px 10px 35px;
+		float: left;
+		margin: 0px 10px 10px 0px;
 		padding: 0px;
-		max-width: 100%;
+		max-width: 50%;
+		height: auto;
 	}
 
 	#staffphoto {
