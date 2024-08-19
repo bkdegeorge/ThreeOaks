@@ -4697,8 +4697,8 @@ input, select, textarea {
 	}
 
 	#stafflogo {
-		float: left;
-		margin: 0px 10px 10px 0px;
+		float: right;
+		margin: 0px 0px 10px 35px;
 		padding: 0px;
 		max-width: 50%;
 		height: auto;
@@ -4707,4 +4707,29 @@ input, select, textarea {
 	#staffphoto {
 		max-width: 100%;
 		transform: scale(0.75);
+		padding: 0px;
+		margin: 0px;
+	}
+
+	#staffphoto {
+		max-width: 100%;
+		transform: scale(0.75);
+		padding: 0px;
+		margin: 0px 0px 15px 0px;
+		float: left;
+	}
+
+	.staffcontainer {
+    	align-items: center;
+	}
+
+	#stafftitle{
+		align-items: flex-start;
+	}
+
+	.verticalLine {
+		border-left: solid #bcbcbc;
+		display: flex;
+    	justify-content: center; /* Center horizontally */
+    	align-items: center;
 	}
