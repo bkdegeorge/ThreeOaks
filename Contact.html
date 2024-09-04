@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Contact Us - Three Oaks Golf Tour</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" href="https://bkdegeorge.github.io/ThreeOaks/images/three Oaks ideal logo copy.png">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header">
+            <div class="header-content">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="images/3OaksFinalLogo.png" alt="Three Oaks Logo" id="logo">
+                    </a>
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Tournaments.html">Tournaments</a></li>
+                        <li><a href="TourInfo">Tour Information</a></li>
+                        <li><a href="#">Why Three Oaks?</a></li>
+                        <li><a href="Staff.html">Meet our Team</a></li>
+                        <li><a href="contact.html" class="active">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <div id="main">
+            <section id="contact" class="main">
+                <div class="inner">
+                    <h1>Contact Us</h1>
+                    <p>We'd love to hear from you. Please fill out the form below, and we'll get back to you as soon as possible.</p>
+                    <form id="contact-form" method="post" action="#">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" required />
+                            </div>
+                            <div class="field half">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" required />
+                            </div>
+                            <div class="field">
+                                <label for="subject">Subject</label>
+                                <input type="text" name="subject" id="subject" required />
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="6" required></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                            <li><input type="reset" value="Clear" /></li>
+                        </ul>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div id="copyright">
+                <ul>
+                    <li>&copy; Three Oaks Golf Tour</li>
+                    <li>Design: <a href="https://bkdegeorge.work" target="_blank">BKD</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle form submission
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Construct the mailto URL
+                const mailSubject = encodeURIComponent(`${subject} - Contact from Three Oaks Website`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+                const mailtoUrl = `mailto:threeoaksgolftour@gmail.com?subject=${mailSubject}&body=${body}`;
+                
+                // Open the user's default email client
+                window.location.href = mailtoUrl;
+            });
+        });
+    </script>
+</body>
+</html>
