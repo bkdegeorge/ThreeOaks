@@ -265,3 +265,4 @@ document.addEventListener('scroll', function() {
     // Apply the blur effect using CSS filter
     document.querySelector('.bg').style.filter = `blur(${blurValue}px)`;
 });
+
