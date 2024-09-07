@@ -78,6 +78,7 @@ body {
     color: #0d0d0d;
     margin-left: 20px;
     margin-bottom: 0px;
+    margin-right: 10px;
     align-items: right;
 }
 
@@ -96,9 +97,12 @@ body {
 
 /* Main content */
 #main {
+    font-family: 'Baskerville';
     padding-top: 150px;
     position: relative;
     z-index: 1;
+    margin: 50px;
+    padding: 500px;
 }
 
 .inner {
@@ -157,9 +161,10 @@ body {
 /* Footer styles */
 #footer {
     color: #dcdcdc;
+    text-shadow: #000;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: static;
     bottom: 0;
     width: 100%;
 }
@@ -210,3 +215,39 @@ body {
         flex: 0 0 100%;
     }
 }
+
+h4.summary {
+    text-align: center;
+    padding: 30px 100px 20px 100px;
+}
+
+#stafflogo {
+    float: right;
+    padding: 20px;
+}
+
+p.why-three-oaks {
+    padding: 0px 50px 0px 50px;
+    font-size: 18px;
+}
+
+p.why-three-oaks2 {
+    padding: 0px 30px 0px 30px;
+    font-size: 18px;
+}
+
+h3.why-three-oaks3 {
+    padding: 0px 30px 0px 30px;
+    font-size: 18px;
+}
+
+p.why-three-oaks-bottom {
+    font-size: 18px;
+    padding: 0px 50px 50px 50px;
+}
+
+p.why-three-oaks-bottom2 {
+    font-size: 18px;
+    padding: 0px 30px 50px 30px;
+}
+
