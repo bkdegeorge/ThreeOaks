@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Tournaments - Three Oaks</title>
+    <title>Meet The Team - Three Oaks</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -56,6 +56,38 @@
         .dropdown-content a:hover {
             background-color: #f1f1f1;
         }
+        .staffcontainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .staff-member {
+            width: 48%;
+            margin-bottom: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .staff-photo {
+            width: 150px;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 1em;
+            padding-top: 15px;
+        }
+        .staff-info {
+            text-align: center;
+        }
+        .staff-title {
+            margin: 0.5em 0;
+        }
+        @media screen and (max-width: 768px) {
+            .staff-member {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -63,7 +95,9 @@
         <header id="header">
             <div class="header-content">
                 <div class="logo-container">
-                    <img src="images/3OaksFinalLogo.png" alt="Three Oaks Logo" id="logo">
+                    <a href="index.html">
+                        <img src="images/3OaksFinalLogo.png" alt="Three Oaks Logo" id="logo">
+                    </a>
                 </div>
                 <nav id="nav">
                     <ul>
@@ -86,9 +120,30 @@
                 </nav>
             </div>
         </header>
-
+        <br>
+        <br>
         <div id="main">
-        
+            <div id="meet-our-team" class="content-section">
+                <br>
+                <div class="staffcontainer">
+                    <div class="staff-member">
+                        <img src="images/AustinNew.jpeg" class="staff-photo" alt="Austin's photo">
+                        <div class="staff-info">
+                            <h3 class="staff-title">Austin Kendziorski</h3>
+                            <h3 class="staff-title">Managing Partner/Co-Founder</h3>
+                            <p>When talking about Austin, Wisconsin, and golf, it is hard to separate the three. Born and raised in Sussex, WI, Austin began playing golf in late middle school. He would go on to play Collegiate golf at the University of Marquette, located in Milwaukee. Austin turned professional in 2019 after graduating Marquette with a degree in Business Administration and Marketing. He played 5 years of professional golf on the mini tours and after not quite breaking through decided to turn his attention to Three Oaks. Austin started Three Oaks Golf to empower players and give them the opportunities in competition he felt was lacking during his playing career.</p>
+                        </div>
+                    </div>
+                    <div class="staff-member">
+                        <img src="images/Mike.jpg" class="staff-photo" alt="Mike's photo">
+                        <div class="staff-info">
+                            <h3 class="staff-title">Michael DeGeorge</h3>
+                            <h3 class="staff-title">Managing Partner/Co-Founder</h3>
+                            <p>Golf has been at the center of Mike's life since he was a boy growing up in a Milwaukee suburb. Mike began as a caddie at the local club, and later worked on its grounds crew and in the pro shop, before becoming an assistant pro at a Cleveland-area club. Wanting to pursue his love of the game as a career, Mike earned his degree in Golf Course Turfgrass Management from Penn State, the preeminent school in the field. Mike interned at Augusta National, and later served as Golf Course Superintendent at Long Cove Club, a Pete Dye masterpiece on Hilton Head Island. Although Mike left the industry for a more stable career as a principal in a national dental dealer corporation, his love for the game endured. Mike launched Three Oaks Golf for him to pursue a new and exciting role in the world of golf.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer id="footer">

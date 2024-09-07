@@ -20,10 +20,11 @@
 .header-content {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     height: 100%;
+    padding: 10px;
 }
 
 .logo-container {
@@ -40,7 +41,6 @@
 #nav {
     flex: 1 1 auto;
     text-align: right;
-    align-self: flex-end;
     font-family: 'Papyrus', fantasy;
     line-height: 1.6;
     color: #333;
@@ -51,12 +51,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
 }
 
 #nav ul li {
     margin-left: 20px;
-    margin-bottom: 5px;
 }
 
 #nav ul li a {
@@ -74,9 +73,6 @@
     font-size: 24px;
     color: #0d0d0d;
     margin-left: 20px;
-    margin-bottom: 0px;
-    margin-right: 10px;
-    align-items: right;
 }
 
 /* Video background */
@@ -166,34 +162,103 @@
     width: 100%;
 }
 
+/* Hamburger menu styles */
+.nav-mobile {
+    display: none;
+}
+
+#nav-toggle {
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: #333;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span:before {
+    top: -10px;
+}
+
+#nav-toggle span:after {
+    bottom: -10px;
+}
+
+#nav-toggle.active span {
+    background-color: transparent;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+    top: 0;
+}
+
+#nav-toggle.active span:before {
+    transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+    transform: rotate(-45deg);
+}
+
 /* Responsive design */
 @media screen and (max-width: 768px) {
     #header {
-        padding: 5px;
+        padding: 5px 0;
     }
 
     .header-content {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
     }
 
     #logo {
         height: 60px;
     }
 
+    .nav-mobile {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
     #nav {
         width: 100%;
         text-align: center;
+        order: 3;
     }
 
     #nav ul {
+        display: none;
         flex-direction: column;
         align-items: center;
         margin-top: 10px;
+        background-color: #EEE1C6;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+    }
+
+    #nav ul.show {
+        display: flex;
     }
 
     #nav ul li {
         margin: 5px 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
     }
 
     .instagram-icon {
@@ -247,4 +312,3 @@ p.why-three-oaks-bottom2 {
     font-size: 18px;
     padding: 0px 30px 50px 30px;
 }
-
