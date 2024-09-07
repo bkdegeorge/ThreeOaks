@@ -263,36 +263,3 @@ document.addEventListener('scroll', function() {
     // Apply the blur effect using CSS filter
     document.querySelector('.bg').style.filter = `blur(${blurValue}px)`;
 });
-
-// Mobile menu functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.getElementById('nav-toggle');
-    const navList = document.querySelector('.nav-list');
-
-    // Toggle mobile menu
-    navToggle.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default action
-        navToggle.classList.toggle('active');
-        navList.classList.toggle('show');
-    });
-
-    // Close mobile menu when a link is clicked
-    const navLinks = document.querySelectorAll('#nav ul li a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navToggle.classList.remove('active');
-            navList.classList.remove('show');
-        });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const isClickInsideNav = navList.contains(event.target);
-        const isClickOnToggle = navToggle.contains(event.target);
-
-        if (!isClickInsideNav && !isClickOnToggle && navList.classList.contains('show')) {
-            navToggle.classList.remove('active');
-            navList.classList.remove('show');
-        }
-    });
-});
