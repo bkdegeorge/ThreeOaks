@@ -14,16 +14,18 @@
     left: 0;
     z-index: 1000;
     padding: 10px 0;
+    display: flex;
+    align-items: flex-end;
 }
 
 .header-content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    width: 100%;
 }
 
 .logo-container {
@@ -34,15 +36,18 @@
     display: block;
     width: auto;
     height: 80px;
+    padding-left: 30px;
 }
 
 /* Navigation styles */
 #nav {
     flex: 1 1 auto;
-    text-align: right;
     font-family: 'Papyrus', fantasy;
-    line-height: 1.6;
+    line-height: 1;
     color: #333;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 #nav ul {
@@ -170,6 +175,7 @@
 
     .header-content {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     #logo {
@@ -180,6 +186,7 @@
     #nav {
         width: 100%;
         text-align: center;
+        justify-content: center;
     }
 
     #nav ul {

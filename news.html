@@ -1,13 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Contact Us - Three Oaks Golf Tour</title>
+    <title>News - Three Oaks Golf Tour</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="icon" href="images/three Oaks ideal logo copy.png">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="icon" href="images/three Oaks ideal logo copy.png">
     <style>
         body {
             background-image: url('images/HomeBG.jpeg');
@@ -17,20 +16,37 @@
             background-attachment: fixed;
         }
         #main {
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 2em;
             border-radius: 10px;
             margin-top: 2em;
+            margin-left: 150px;
+            margin-right: 150px;
         }
-        .tournament-info h2 {
+        .news-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .news-content h1 {
+            color: #333;
             margin-bottom: 1em;
         }
-        .tournament-info a {
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s ease;
+        .news-content p {
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 1em;
         }
-        .tournament-info a:hover {
-            color: #555;
+        .continue-reading {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .continue-reading:hover {
+            background-color: #2980b9;
         }
         .dropdown {
             position: relative;
@@ -58,9 +74,8 @@
         }
     </style>
 </head>
-<body class="is-preload">
+<body>
     <div id="wrapper">
-        <!-- Header -->
         <header id="header">
             <div class="header-content">
                 <div class="logo-container">
@@ -93,54 +108,30 @@
             </div>
         </header>
 
-        <!-- Main -->
         <div id="main">
-            <section id="contact" class="main">
-                <div class="inner">
-                    <br>
-                    <br>
-                    <h1>Contact Us</h1>
-                    <p>We'd love to hear from you. Please fill out the form below, and we'll get back to you as soon as possible.</p>
-                    <form id="contact-form" method="post" action="#">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" required />
-                            </div>
-                            <div class="field half">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" required />
-                            </div>
-                            <div class="field">
-                                <label for="subject">Subject</label>
-                                <input type="text" name="subject" id="subject" required />
-                            </div>
-                            <div class="field">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" rows="6" required></textarea>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary" /></li>
-                            <li><input type="reset" value="Clear" /></li>
-                        </ul>
-                    </form>
-                </div>
-            </section>
+            <div class="news-content">
+                <br>
+                <br>
+                <br>
+                <h1>A new golf mini-tour, rooted in the Midwest and with $450,000 purses, former Marquette player Austin Kendziorski says, is 'planting seeds for something special'</h1>
+                
+                <p>Austin Kendziorski played golf at Marquette University from 2015 to 2019 and left with a degree in business administration and a golf game good enough, he thought, to pursue a professional career.</p>
+                
+                <p>He spent the next five years chasing the dream on developmental tours, living out of his car at times, caddying when he needed money and learning valuable lessons about life and golf.</p>
+                
+                <p>Now 27, Kendziorski has hung up his competitive spikes. But his experience as a mini-tour player sparked an idea for a new developmental tour, one that would offer substantial purses, be based in the Midwest and potentially serve as a springboard to the Korn Ferry Tour and, ultimately, the PGA Tour.</p>
+                
+                <a href="https://www.wisconsin.golf/19th_hole/gary_d_amato/a-new-golf-mini-tour-rooted-in-the-midwest-and-with-450-000-purses-former/article_7dbe8a9e-492e-11ef-9097-3f2c9fa931a6.html" target="_blank" class="continue-reading">Continue Reading</a>
+            </div>
         </div>
 
-        <!-- Footer -->
         <footer id="footer">
             <div id="copyright">
-                <ul>
-                    <li>&copy; Three Oaks Golf Tour</li>
-                    <li>Design: <a href="https://bkdegeorge.work" target="_blank">BKD</a></li>
-                </ul>
+                <ul><li>&copy; Threeoaksgolftour</li><li>Design: <a href="https://bkdegeorge.work" target="_blank">BKD</a></li></ul>
             </div>
         </footer>
     </div>
 
-    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -148,26 +139,5 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Handle form submission
-            const contactForm = document.getElementById('contact-form');
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const subject = document.getElementById('subject').value;
-                const message = document.getElementById('message').value;
-                
-                // Construct the mailto URL
-                const mailSubject = encodeURIComponent(`${subject} - Contact from Three Oaks Website`);
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-                const mailtoUrl = `mailto:threeoaksgolftour@gmail.com?subject=${mailSubject}&body=${body}`;
-                
-                // Open the user's default email client
-                window.location.href = mailtoUrl;
-            });
-        });
-    </script>
 </body>
 </html>
