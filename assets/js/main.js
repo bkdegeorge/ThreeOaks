@@ -263,3 +263,52 @@ document.addEventListener('scroll', function() {
     // Apply the blur effect using CSS filter
     document.querySelector('.bg').style.filter = `blur(${blurValue}px)`;
 });
+
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const body = document.body;
+
+    hamburger.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        body.classList.toggle('menu-open');
+    });
+
+    // Toggle dropdown in mobile menu
+    const dropdowns = document.querySelectorAll('.mobile-menu .dropdown');
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        const content = dropdown.querySelector('.dropdown-content');
+        
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            content.classList.toggle('active');
+        });
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburger = document.querySelector('.hamburger-menu');
+    
+    if (!mobileMenu.contains(event.target) && !hamburger.contains(event.target)) {
+        mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+});
+
+// Ensure proper display on window resize
+window.addEventListener('resize', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburger = document.querySelector('.hamburger-menu');
+    
+    if (window.innerWidth > 768) {
+        mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
+});

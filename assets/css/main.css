@@ -82,6 +82,66 @@
     padding-left: 10px;
 }
 
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: #EEE1C6;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.mobile-menu ul li {
+    margin-bottom: 15px;
+}
+
+.mobile-menu ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Papyrus', fantasy;
+}
+
+.mobile-menu .dropdown-content {
+    display: none;
+    padding-left: 20px;
+}
+
+.mobile-menu .dropdown-content.active {
+    display: block;
+}
+
 /* Video background */
 #bg-video {
     position: fixed;
@@ -170,43 +230,29 @@
 }
 
 /* Responsive design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
     #header {
         padding: 5px 0;
     }
 
     .header-content {
-        justify-content: center;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
     }
 
     #logo {
         height: 60px;
-        margin-bottom: 10px;
+        margin-bottom: 0;
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+
+    .hamburger-menu {
+        display: block;
     }
 
     #nav {
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-    }
-
-    #nav ul {
-        justify-content: center;
-    }
-
-    #nav ul li {
-        margin: 5px;
-    }
-
-    #nav ul li a {
-        font-size: 14px;
-    }
-
-    .instagram-icon {
-        font-size: 18px;
-        padding-right: 5px;
-        padding-left: 10px;
+        display: none;
     }
 
     #main {
@@ -219,6 +265,10 @@
 
     #contact .field.half {
         flex: 0 0 100%;
+    }
+
+    .nav-list li {
+        display: none;
     }
 }
 
