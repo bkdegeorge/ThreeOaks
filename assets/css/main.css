@@ -274,12 +274,15 @@
     .news-content {
         /* CHANGE */
     }
+
+    p.why-three-oaks2 {
+        padding: 0px 30px 0px 30px;
+    }
 }
 
 h4.summary {
     text-align: center;
-    padding: 30px 100px 20px 100px;
-}
+    }
 
 #stafflogo {
     float: right;
@@ -307,6 +310,6 @@ p.why-three-oaks-bottom {
 }
 
 p.why-three-oaks-bottom2 {
-    font-size: 18px;
+    font-size: 12px;
     padding: 0px 30px 50px 30px;
 }
