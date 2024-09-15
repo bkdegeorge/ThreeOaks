@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Tournaments - Three Oaks</title>
+    <title>Tour Information - Three Oaks</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -55,6 +55,24 @@
         }
         .dropdown-content a:hover {
             background-color: #f1f1f1;
+        }
+        @media screen and (max-width: 736px) {
+            #main {
+                padding: 1em;
+            }
+            .why-three-oaks, .why-three-oaks-bottom {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            .dropdown-content {
+                position: static;
+                display: none;
+                background-color: transparent;
+                box-shadow: none;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
         }
     </style>
 </head>
