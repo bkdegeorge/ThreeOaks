@@ -270,6 +270,10 @@
     .nav-list li {
         display: none;
     }
+
+    .news-content {
+        /* CHANGE */
+    }
 }
 
 h4.summary {
