@@ -257,6 +257,8 @@
 
     #main {
         padding-top: 120px;
+        padding: 20px;
+        margin: 20px;
     }
 
     .inner {
@@ -271,12 +273,22 @@
         display: none;
     }
 
-    .news-content {
-        /* CHANGE */
+    p.why-three-oaks2 {
+        padding: 0px 15px 0px 15px;
     }
 
-    p.why-three-oaks2 {
-        padding: 0px 30px 0px 30px;
+    #stafflogo {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    p.why-three-oaks,
+    p.why-three-oaks-bottom {
+        padding: 0px 15px;
+        font-size: 16px;
     }
 }
 
@@ -332,4 +344,30 @@ body.menu-open::before {
 body.menu-open #header,
 body.menu-open .mobile-menu {
     z-index: 1001;
+}
+
+/* Additional mobile styles */
+@media screen and (max-width: 736px) {
+    #main {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    p.why-three-oaks,
+    p.why-three-oaks-bottom,
+    p.why-three-oaks2,
+    h3.why-three-oaks3 {
+        padding: 0px 10px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    p.why-three-oaks-bottom {
+        padding-bottom: 30px;
+    }
+
+    #stafflogo {
+        padding: 10px;
+        max-width: 200px;
+    }
 }
