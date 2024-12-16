@@ -290,6 +290,11 @@
         padding: 0px 15px;
         font-size: 16px;
     }
+
+    /* Adjust video position for mobile */
+    #bg-video {
+        object-position: 65% center;
+    }
 }
 
 h4.summary {
@@ -369,5 +374,10 @@ body.menu-open .mobile-menu {
     #stafflogo {
         padding: 10px;
         max-width: 200px;
+    }
+
+    /* Further adjust video position for smaller screens */
+    #bg-video {
+        object-position: 70% center;
     }
 }
