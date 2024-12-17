@@ -293,7 +293,12 @@
 
     /* Adjust video position for mobile */
     #bg-video {
-        object-position: 65% center;
+        position: fixed;
+        right: auto;
+        left: -25%;
+        min-width: 150%;
+        width: 150%;
+        transform: scale(1.2);
     }
 }
 
@@ -378,6 +383,9 @@ body.menu-open .mobile-menu {
 
     /* Further adjust video position for smaller screens */
     #bg-video {
-        object-position: 70% center;
+        left: -35%;
+        min-width: 170%;
+        width: 170%;
+        transform: scale(1.3);
     }
 }
