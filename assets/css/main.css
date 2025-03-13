@@ -356,8 +356,63 @@ body.menu-open .mobile-menu {
     z-index: 1001;
 }
 
+/* Center buttons styles */
+.center-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.action-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #EEE1C6;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Papyrus', fantasy;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #8B4513;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 180px;
+}
+
+.action-button:hover {
+    background-color: #8B4513;
+    color: #EEE1C6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-button {
+    background-color: #EEE1C6;
+}
+
+.volunteer-button {
+    background-color: #EEE1C6;
+}
+
 /* Additional mobile styles */
 @media screen and (max-width: 736px) {
+    .center-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .action-button {
+        padding: 12px 24px;
+        font-size: 16px;
+        min-width: 160px;
+    }
     #main {
         padding: 15px;
         margin: 15px;
